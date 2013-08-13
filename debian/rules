@@ -1,0 +1,40 @@
+#!/usr/bin/make -f
+PACKAGE = $(shell dh_listpackages)
+TMP     = $(CURDIR)/debian/$(PACKAGE)
+
+%:
+	dh $@ 
+
+override_dh_auto_install:
+	cp $(CURDIR)/doc/man/vramsteg.1.in debian/vramsteg.1
+	dh_auto_install
+	rm -f $(TMP)/usr/share/doc/vramsteg/COPYING \
+		$(TMP)/usr/share/doc/vramsteg/INSTALL \
+		$(TMP)/usr/share/doc/vramsteg/minimal_default \
+		$(TMP)/usr/share/doc/vramsteg/estimate_default \
+		$(TMP)/usr/share/doc/vramsteg/label_default \
+		$(TMP)/usr/share/doc/vramsteg/remove_mono \
+		$(TMP)/usr/share/doc/vramsteg/elapsed_mono \
+		$(TMP)/usr/share/doc/vramsteg/basic_mono \
+		$(TMP)/usr/share/doc/vramsteg/percentage_default \
+		$(TMP)/usr/share/doc/vramsteg/remove_default \
+		$(TMP)/usr/share/doc/vramsteg/percentage_text \
+		$(TMP)/usr/share/doc/vramsteg/all_text \
+		$(TMP)/usr/share/doc/vramsteg/basic_default \
+		$(TMP)/usr/share/doc/vramsteg/elapsed_default \
+		$(TMP)/usr/share/doc/vramsteg/label_text \
+		$(TMP)/usr/share/doc/vramsteg/minimal_mono \
+		$(TMP)/usr/share/doc/vramsteg/percentage_mono \
+		$(TMP)/usr/share/doc/vramsteg/all_mono \
+		$(TMP)/usr/share/doc/vramsteg/label_mono \
+		$(TMP)/usr/share/doc/vramsteg/all_default \
+		$(TMP)/usr/share/doc/vramsteg/basic_text \
+		$(TMP)/usr/share/doc/vramsteg/estimate_mono \
+		$(TMP)/usr/share/doc/vramsteg/estimate_text \
+		$(TMP)/usr/share/doc/vramsteg/remove_text \
+		$(TMP)/usr/share/doc/vramsteg/elapsed_text \
+		$(TMP)/usr/share/doc/vramsteg/minimal_text
+
+override_dh_installexamples:
+	dh_installexamples
+	rm -f $(TMP)/usr/share/doc/vramsteg/examples/CMakeLists.txt

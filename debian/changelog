@@ -1,0 +1,5 @@
+vramsteg (1.0.1-1) unstable; urgency=low
+
+  * Initial release (Closes: #719600).
+
+ -- Alejandro Garrido Mota <alejandro@debian.org>  Tue, 13 Aug 2013 15:39:07 +0200

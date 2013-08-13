@@ -1,0 +1,17 @@
+Source: vramsteg
+Section: utils
+Priority: extra
+Maintainer: Alejandro Garrido Mota <alejandro@debian.org>
+Build-Depends: debhelper (>= 9), cmake
+Standards-Version: 3.9.4
+Homepage: http://tasktools.org/projects/vramsteg.html
+Vcs-Git: git://github.com/mogaal/vramsteg.git
+Vcs-Browser: https://github.com/mogaal/vramsteg
+
+Package: vramsteg
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: provide shell scripts with a full-featured progress indicator
+ Vramsteg provide progress bar that can display elapsed time, remaining time
+ estimate, percentage completed, and labels.  The progress bar can have 
+ user-specified colors, and be rendered in multiple styles.
