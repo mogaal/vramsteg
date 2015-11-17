@@ -3,7 +3,7 @@ Section: utils
 Priority: extra
 Maintainer: Alejandro Garrido Mota <alejandro@debian.org>
 Build-Depends: debhelper (>= 9), cmake
-Standards-Version: 3.9.4
+Standards-Version: 3.9.6
 Homepage: http://tasktools.org/projects/vramsteg.html
 Vcs-Git: git://github.com/mogaal/vramsteg.git
 Vcs-Browser: https://github.com/mogaal/vramsteg

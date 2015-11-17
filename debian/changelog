@@ -1,3 +1,13 @@
+vramsteg (1.1.0-1) unstable; urgency=low
+
+  * New upstream release. 
+  * Add watch file
+  * Update Standards-Version to 3.9.6 
+  * Remove vramsteg.doc file: NEWS and README (files referenced) don't
+    point out relevant information.
+
+ -- Alejandro Garrido Mota <alejandro@debian.org>  Tue, 17 Nov 2015 16:35:22 +0000
+
 vramsteg (1.0.1-1) unstable; urgency=low
 
   * Initial release (Closes: #719600).
