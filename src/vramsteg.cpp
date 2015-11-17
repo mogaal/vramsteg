@@ -1,8 +1,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 // Vramsteg - Utility for displaying progress bars in shell scripts.
 //
-// Copyright 2010 - 2013, Paul Beckingham, Federico Hernandez.
-// All rights reserved.
+// Copyright 2010 - 2015, Paul Beckingham, Federico Hernandez.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -82,8 +81,8 @@ void showVersion ()
 {
   std::cout << "\n"
             << "\033[1m" << PACKAGE_STRING << "\033[0m\n"
-            << "Copyright (C) 2010 - 2013, Göteborg Bit Factory\n"
-            << "Copyright (C) 2010 - 2013, P. Beckingham, F. Hernandez.\n"
+            << "Copyright (C) 2010 - 2015, Göteborg Bit Factory\n"
+            << "Copyright (C) 2010 - 2015, P. Beckingham, F. Hernandez.\n"
             << "\n"
             << "Vramsteg may be copied only under the terms of the MIT license, "
             << "which may be found in the taskwarrior source kit.\n"
@@ -110,15 +109,15 @@ int main (int argc, char** argv)
     signal (SIGUSR1,   SIG_IGN);
     signal (SIGUSR2,   SIG_IGN);
 
-    int         arg_current    = 0;
+    long        arg_current    = 0;
 #ifdef WAITING_FOR_VITAPI
     std::string arg_done       = "";
 #endif
     bool        arg_elapsed    = false;
     bool        arg_estimate   = false;
     std::string arg_label;
-    int         arg_max        = 0;
-    int         arg_min        = 0;
+    long        arg_max        = 0;
+    long        arg_min        = 0;
     bool        arg_percentage = false;
 #ifdef WAITING_FOR_VITAPI
     std::string arg_remaining  = "";
@@ -166,15 +165,15 @@ int main (int argc, char** argv)
     {
       switch (ch)
       {
-      case 'c': arg_current    = atoi (optarg);        break;
+      case 'c': arg_current    = atol (optarg);        break;
 #ifdef WAITING_FOR_VITAPI
       case 'd': arg_done       = optarg;               break;
 #endif
       case 'e': arg_elapsed    = true;                 break;
       case 't': arg_estimate   = true;                 break;
       case 'l': arg_label      = optarg;               break;
-      case 'x': arg_max        = atoi (optarg);        break;
-      case 'm': arg_min        = atoi (optarg);        break;
+      case 'x': arg_max        = atol (optarg);        break;
+      case 'm': arg_min        = atol (optarg);        break;
       case 'n': std::cout << time (NULL) << std::endl; exit (0);
       case 'p': arg_percentage = true;                 break;
 #ifdef WAITING_FOR_VITAPI

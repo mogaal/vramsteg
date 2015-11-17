@@ -2,12 +2,12 @@
 
 /* Package information */
 #define PACKAGE "vramsteg"
-#define VERSION "1.0.1"
+#define VERSION "1.1.0"
 #define PACKAGE_BUGREPORT "support@yootabory.com"
 #define PACKAGE_NAME      "vramsteg"
 #define PACKAGE_TARNAME   "vramsteg"
-#define PACKAGE_VERSION   "1.0.1"
-#define PACKAGE_STRING    "vramsteg 1.0.1"
+#define PACKAGE_VERSION   "1.1.0"
+#define PACKAGE_STRING    "vramsteg 1.1.0"
 
 /* git information */
 #define HAVE_COMMIT
@@ -18,8 +18,9 @@
 /* #undef CYGWIN */
 /* #undef FREEBSD */
 /* #undef OPENBSD */
+/* #undef NETBSD */
 /* #undef HAIKU */
 /* #undef SOLARIS */
-/* #undef WIN32 */
+/* #undef KFREEBSD */
+/* #undef GNUHURD */
 /* #undef UNKNOWN */
-
